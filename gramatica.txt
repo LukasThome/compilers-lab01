@@ -1,0 +1,14 @@
+# Exemplo de gramática com recursão à esquerda
+
+# Recursão direta: E -> E + T
+E -> E + T | T
+
+# Recursão direta: T -> T * F
+T -> T * F | F
+
+# Sem recursão
+F -> id | ( E )
+
+# Recursão indireta: A -> B x, B -> A y  (ciclo A -> B -> A)
+A -> B x | a
+B -> A y | b
